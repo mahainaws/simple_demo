@@ -19,7 +19,7 @@ pipeline {
 		stage("Deploy to Dev") {
 			steps {
 				echo 'Dev deploy is in Progress'
-				sh 'sudo scp -i /home/ec2-user/.ssh/id_rsa index.html ec2-user@172.31.15.106:/opt/tomcat/webapps/demo'
+				sh 'scp -i /home/ec2-user/.ssh/id_rsa index.html ec2-user@172.31.15.106:/opt/tomcat/webapps/demo'
 			}
 		}
 }
