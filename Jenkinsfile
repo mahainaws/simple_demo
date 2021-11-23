@@ -13,7 +13,7 @@ pipeline {
 			steps {
 				echo 'Code compilation is in Progress'
 				sleep 5
-				echo 'Compilation is Completed'
+				echo 'Compilation is Completed..'
 			}
 		}
 		stage("Deploy to Dev") {
