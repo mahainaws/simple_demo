@@ -19,7 +19,7 @@ pipeline {
 		stage("Deploy to Dev") {
 			steps {
 				echo 'Dev deploy is in Progress'
-				sh 'cp index.html /opt/tomcat/webapps/demo'
+				sh 'cp index.html /opt/tomcat/webapps/ROOT'
 			}
 		}
 }
