@@ -1,1 +1,21 @@
-<h1>This is demo</h1>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<html>
+<head><title>Hung Thread Test</title></head>
+<body>
+    <h2>Hung Thread Simulation</h2>
+    <%
+        // Create a hung thread instead of blocking the main JSP execution
+        new Thread(() -> {
+            try {
+                while (true) {
+                    Thread.sleep(1000);
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+        
+        out.println("Hung thread started! Check Tomcat logs.");
+    %>
+</body>
+</html>
